@@ -1,0 +1,9 @@
+---
+  - name: Install Jenkins
+    hosts: all
+    become: yes
+    remote_user: centos
+    gather_facts: True
+    roles:
+      - ../roles/install_openjdk
+      - ../roles/install_jenkins
